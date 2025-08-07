@@ -36,6 +36,12 @@ O Notification Queue é um sistema completo para envio e acompanhamento de mensa
 - Node.js (recomendado versão 18+)
 - RabbitMQ rodando localmente ou em ambiente acessível
 
+## Observações
+
+- Certifique-se de que o RabbitMQ está configurado corretamente e acessível pelo backend.
+- Certifique-se de criar/colar o arquivo .env no diretório do backend contendo a url de conexão com o RabbitMQ.
+- O frontend se comunica com o backend para enviar mensagens e receber atualizações de status.
+
 ### Backend
 
 1. Instale as dependências:
@@ -72,11 +78,6 @@ O Notification Queue é um sistema completo para envio e acompanhamento de mensa
    ```bash
    ng test
    ```
-
-## Observações
-
-- Certifique-se de que o RabbitMQ está configurado corretamente e acessível pelo backend.
-- O frontend se comunica com o backend para enviar mensagens e receber atualizações de status.
 
 ## Estrutura do Projeto
 
