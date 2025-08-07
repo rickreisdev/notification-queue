@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+.teste-scss {
+  background: #f0f0f0;
+  border: 2px solid #007bff;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 2rem auto;
+  font-family: "Inter", sans-serif;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.input-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+input {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.notificacao-list {
+  list-style: none;
+  padding: 0;
+}
+
+.notificacao-list li {
+  background: #fff;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status {
+  font-weight: bold;
+}
+
+.sucesso {
+  border-left: 5px solid #28a745;
+}
+
+.falha {
+  border-left: 5px solid #dc3545;
+}

@@ -1,0 +1,36 @@
+<div class="teste-scss notificacao-container">
+    <h2 class="text-center">Notificador Queue</h2>
+    <div class="input-group">
+        <input [(ngModel)]="conteudoMensagem" placeholder="Digite a mensagem" />
+        <button (click)="enviar()">Enviar</button>
+    </div>
+    <ul class="notificacao-list">
+        <li *ngFor="let n of notificacoes"
+            [ngClass]="{'sucesso': n.status === 'PROCESSADO_SUCESSO', 'falha': n.status === 'FALHA_PROCESSAMENTO', 'aguardando': n.status === 'AGUARDANDO PROCESSAMENTO'}"
+            [ngStyle]="{
+              'background': n.status === 'PROCESSADO_SUCESSO' ? '#e6ffe6' : n.status === 'FALHA_PROCESSAMENTO' ? '#ffe6e6' : '#fffbe6',
+              'borderLeft': n.status === 'PROCESSADO_SUCESSO' ? '5px solid #28a745' : n.status === 'FALHA_PROCESSAMENTO' ? '5px solid #dc3545' : '5px solid #ffc107'
+            }">
+            <strong>{{ n.conteudoMensagem }}</strong>
+            <span class="status">
+                <ng-container [ngSwitch]="n.status">
+                    <ng-container *ngSwitchCase="'PROCESSADO_SUCESSO'">
+                        <span style="color:#28a745;font-weight:bold;">
+                            &#10003; Processado
+                        </span>
+                    </ng-container>
+                    <ng-container *ngSwitchCase="'FALHA_PROCESSAMENTO'">
+                        <span style="color:#dc3545;font-weight:bold;">
+                            &#10060; Falha
+                        </span>
+                    </ng-container>
+                    <ng-container *ngSwitchDefault>
+                        <span style="color:#ffc107;font-weight:bold;">
+                            &#9203; Aguardando
+                        </span>
+                    </ng-container>
+                </ng-container>
+            </span>
+        </li>
+    </ul>
+</div>
