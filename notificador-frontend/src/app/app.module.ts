@@ -15,6 +15,7 @@ import { NotificacaoComponent } from './notificacao/notificacao.component';
     RouterModule.forRoot(routes),
     AppComponent,
     NotificacaoComponent,
+    
   ],
   bootstrap: [AppComponent],
 })
